@@ -16,7 +16,7 @@ pipeline {
         NEXUSIP = '172.31.11.114'
         NEXUSPORT = '8081'
         NEXUS_GRP_REPO = 'vpro-maven-group'
-	    NEXUS_CREDENTIAL_ID = "nexuslogin"
+	    NEXUS_LOGIN = "nexuslogin"
         SONARSERVER = 'sonarserver'
         SONARSCANNER ='sonarscanner'
         
