@@ -92,7 +92,18 @@ pipeline {
                         )
                      }
          }
-               
+                        
          }  
-}  
+       post {
+            always{
+                echo 'Slack Notification.'
+                slackSend channel: '#devops',
+                color: COLOR_MAP[CurrentBuild.CurrentResult],
+                message: "*${CurrentBuild.CurrentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n More info at: ${env.BUILD.URL}"
+            }
+       }
+       
+       }        
+
+
 	
