@@ -97,7 +97,7 @@ pipeline {
                            )
                      }
                 }
-                        
+                  
          
          stage('Build App Image') {
             steps {
@@ -119,8 +119,7 @@ pipeline {
          }
 
        }
-
-
+}
        
              
 
