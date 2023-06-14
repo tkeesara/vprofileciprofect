@@ -1,24 +1,25 @@
 
 
 pipeline {
-    
-	agent any
-	
-	
+    	agent any
+		
     environment {
         cluster = "vproprod"
         service = "vproappprodsvc"
         
             }
-	          
+
+        stages {     
          stage('Deploy to Prod ecs') {
             steps {
                withAWS(credentials: 'awscreds' , region: 'ap-south-1') {
                   sh 'aws ecs update-service --cluster ${cluster}  --service ${service} --force-new-deployment'
-               }
-           }
-       }
-   }
+            }
+        }
+    }
+}
+
+}
 
 
        
