@@ -1,4 +1,4 @@
-########################## changes to staging######
+########################## changes to staging############
 ### Prerequisites
 - JDK 1.8 or later
 - Maven 3 or later
